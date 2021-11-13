@@ -1,0 +1,16 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+<hr>
+<!-- ngSubmit hace es para enviar el formulario pero sin recargar la pagina, solo en angular, se les llama eventos personalizados -->
+<form (ngSubmit)="agregar()">
+    <!-- con [value] solo lo estamos modificando visualmente, estamos aplicando lo que es one way data binding -->
+    <!-- () es para emitir o escuchar eventos, [] es para establecer algunas propiedades a este objeto -->
+    <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre" (input)="cambiarNombre($event)"> esto se puede hacer la siguiente manera -->
+
+    <!-- [ngModel] al ponerle parentesis dentro [(ngModel)] estamos diciendo que queremos escuchar y emitir el evento y el evento caera en la propiedad que le asignemos, esto es el two way data binding-->
+    <input type="text" placeholder="Nombre" [(ngModel)]="nuevo.nombre" name="nombre">
+
+
+    <input type="number" placeholder="Poder" [(ngModel)]="nuevo.poder" name="poder">
+    <button type="submit">Agregar</button>
+
+</form>

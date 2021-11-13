@@ -1,0 +1,7 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <!-- {{pj.poder | number}} el | es un pipe y con number lo que hace es graficarlo como number, se le pueden poner decimales entre otras cosas, los pipes sirven para transofrmar visualmente la informacion -->
+    <li *ngFor="let pj of personajes"> {{pj.nombre}} - {{pj.poder | number}}
+    </li>
+</ul>

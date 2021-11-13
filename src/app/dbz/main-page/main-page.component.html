@@ -1,0 +1,44 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <ul> -->
+        <!-- {{pj.poder | number}} el | es un pipe y con number lo que hace es graficarlo como number, se le pueden poner decimales entre otras cosas, los pipes sirven para transofrmar visualmente la informacion -->
+        <!-- <li *ngFor="let pj of personajes"> {{pj.nombre}} - {{pj.poder | number}}
+            </li>
+        </ul> -->
+        <!-- Creamos un componente reutilizable para mostrarlo aqui y no se haga tando codigo en un solo documento -->
+        <!-- Aqui estamos asociando a una propiedad de nuestra clase, en este caso de nuestro main pag component, [personajes] viene por el nombre que tenemos en personajes.component  -->
+        <!-- tenemos [data] por que en el componente de personajes le decimos que el input sera conocido como data para no tener nombres iguales -->
+        <!-- <app-personajes [personajes]="personajes"> -->
+        <app-personajes>
+
+
+        </app-personajes>
+    </div>
+
+    <div class="col">
+        <!-- <h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr> -->
+        <!-- ngSubmit hace es para enviar el formulario pero sin recargar la pagina, solo en angular, se les llama eventos personalizados -->
+        <!-- <form (ngSubmit)="agregar()"> -->
+        <!-- con [value] solo lo estamos modificando visualmente, estamos aplicando lo que es one way data binding -->
+        <!-- () es para emitir o escuchar eventos, [] es para establecer algunas propiedades a este objeto -->
+        <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre" (input)="cambiarNombre($event)"> esto se puede hacer la siguiente manera -->
+
+        <!-- [ngModel] al ponerle parentesis dentro [(ngModel)] estamos diciendo que queremos escuchar y emitir el evento y el evento caera en la propiedad que le asignemos, esto es el two way data binding-->
+        <!-- <input type="text" placeholder="Nombre" [(ngModel)]="nuevo.nombre" name="nombre"> -->
+        <!-- <input type="number" placeholder="Poder" [(ngModel)]="nuevo.poder" name="poder">
+            <button type="submit">Agregar</button>
+        </form> -->
+        <!-- Me lleve todo esto al componente de agregar -->
+
+        <!-- <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"></app-agregar> -->
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+
+
+    </div>
+</div>
